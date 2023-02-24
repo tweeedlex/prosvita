@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/e-store-client-new/static/css/main.54e2abaf.css",
+    "main.js": "/e-store-client-new/static/js/main.cac53143.js",
+    "static/media/teacher.png": "/e-store-client-new/static/media/teacher.bed4a97de3750902941d.png",
+    "static/media/background.png": "/e-store-client-new/static/media/background.57bbd0f36f4209fcec4a.png",
+    "static/media/desk.png": "/e-store-client-new/static/media/desk.7bcdd470c747ff15cd32.png",
+    "static/media/group.png": "/e-store-client-new/static/media/group.7631d0f3ef1c32ff0cd5.png",
+    "static/media/zno.jpg": "/e-store-client-new/static/media/zno.fe81e0c8c305da50a90a.jpg",
+    "static/media/courses.webp": "/e-store-client-new/static/media/courses.81c801d7fae98d83e8f7.webp",
+    "static/media/chancellery.jpg": "/e-store-client-new/static/media/chancellery.b6f720d558715b18a205.jpg",
+    "static/media/transition.png": "/e-store-client-new/static/media/transition.df772923565a328c785b.png",
+    "index.html": "/e-store-client-new/index.html",
+    "main.54e2abaf.css.map": "/e-store-client-new/static/css/main.54e2abaf.css.map",
+    "main.cac53143.js.map": "/e-store-client-new/static/js/main.cac53143.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54e2abaf.css",
+    "static/js/main.cac53143.js"
+  ]
+}
