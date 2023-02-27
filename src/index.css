@@ -153,3 +153,22 @@ a {
   color: #2e5c38;
   background-color: #fff;
 }
+
+.loading {
+  display: flex;
+}
+
+.loading::after {
+  content: url("./images/loader.png");
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  
