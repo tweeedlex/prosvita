@@ -4,7 +4,7 @@ import logoLetter from "../images/header/logo P.png";
 import searchIcon from "../images/header/search.png";
 import cartIcon from "../images/header/cart.png";
 import profileIcon from "../images/header/profile.png";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Login } from "./Login";
 import { Registration } from "./Registration";
 import { Basket } from "./Basket";
@@ -48,10 +48,10 @@ export const Header = (props) => {
   return (
     <header className={styles.header}>
       <div className={"header__container " + styles.container}>
-        <a className={styles.logo} href="/">
+        <Link className={styles.logo} to="/">
           <img src={logoLetter} />
           <span>росвіта</span>
-        </a>
+        </Link>
 
         <div
           className={
@@ -68,18 +68,18 @@ export const Header = (props) => {
           <nav className={styles.navigation}>
             <ul>
               <li className={location.pathname === "/" ? styles.active : ""}>
-                <a href="/">Головна</a>
+                <Link to="/">Головна</Link>
                 <span className={styles.hoverline}></span>
               </li>
               <li>
-                <a
-                  href="/catalog"
+                <Link
+                  to="/catalog"
                   className={
                     location.pathname === "/catalog" ? styles.active : ""
                   }
                 >
                   Каталог
-                </a>
+                </Link>
                 <span className={styles.hoverline}></span>
               </li>
 
@@ -123,8 +123,8 @@ export const Header = (props) => {
                 <div className={styles.popUpContent}>
                   <p>{props.email}</p>
                   <a href="/">Мої замовлення</a>
-                  {props.isAdmin && <a href="/admin">Адмін-панель</a>}
-                  {props.isManager && <a href="/orders">Замовлення</a>}
+                  {props.isAdmin && <Link to="/admin">Адмін-панель</Link>}
+                  {props.isManager && <Link to="/orders">Замовлення</Link>}
                   <a onClick={() => logOut()}>Вийти</a>
                 </div>
               ) : (
