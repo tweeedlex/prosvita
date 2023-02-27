@@ -2,15 +2,16 @@ import React from "react";
 import styles from "./css/Footer.module.css"
 import logoLetter from "../images/header/logo P.png";
 import emailIcon from "../images/footer/mail.png";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={"container " + styles.container}>
-        <a className={styles.logo} href="/">
+        <Link className={styles.logo} to="/">
           <img src={logoLetter} />
           <span>росвіта</span>
-        </a>
+        </Link>
 
         <p className={styles.copyright}>© 2022-2023 Всі права захищені.</p>
         <p className={styles.email}>
