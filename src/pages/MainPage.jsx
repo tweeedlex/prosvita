@@ -105,7 +105,11 @@ export const MainPage = () => {
         <div className={styles.items}>
           <div className={styles.cards}>
             {isLoading ? (
-              <div className="loader"></div>
+              <div className={styles.loading}>
+                Триває завантаження даних...
+                <br />В окремих випадках це може зайняти декілька хвилин.
+                <div className="loading"></div>
+              </div>
             ) : items.length ? (
               items.map((item) => <Item key={item.id} item={item} />)
             ) : (
