@@ -73,6 +73,14 @@
   gap: 80px;
 }
 
+.navigation ul li {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .navigation ul li a {
   font-size: 24px;
   cursor: pointer;
