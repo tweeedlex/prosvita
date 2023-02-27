@@ -120,6 +120,7 @@ h2 {
 .locked,
 .lock {
   overflow: hidden;
+  overflow-y: scroll;
 }
 
 .backgrounded {
