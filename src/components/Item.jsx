@@ -50,6 +50,7 @@ export const Item = observer(({ item, classN }) => {
 
   const addToCart = async (item) => {
     await actionCart("add", item)
+      .then((e) => (e ? alert("Авторизуйтесь") : null))
       .then(() => setItemInBasket(true));
   };
   const removeFromCart = async (item) =>
