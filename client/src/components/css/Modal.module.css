@@ -1,0 +1,207 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  min-width: 500px;
+  max-height: 80vh;
+  padding: 20px;
+  background: linear-gradient(231.77deg, #1e5c2c 39.01%, #12451e 97.94%);
+  border-radius: 40px;
+  z-index: 3;
+  overflow: auto;
+}
+
+.basket {
+  width: 1080px;
+  max-height: 100vh;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.input,
+.select {
+  border: 1px solid #ffffff;
+  border-radius: 64px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.select {
+  background-color: rgba(0, 0, 0, 0);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectCheck {
+  content: url("../../images/admin/select-arrow.png");
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.select option {
+  background-color: #1e5c2c;
+  border-radius: 10px;
+}
+
+.action {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: #ffffff;
+  color: #2e5c38;
+  border-radius: 64px;
+  height: 36px;
+  align-self: flex-end;
+  border: 1px solid #fff;
+  padding: 6px 15px;
+
+  transition: all 0.3s ease;
+}
+
+.action:hover {
+  background-color: #2e5c38;
+  color: #fff;
+}
+
+.required {
+  position: relative;
+}
+
+.required::after {
+  content: "*";
+  font-size: 24px;
+  position: absolute;
+  color: #e80000;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.row .selectCheck {
+  right: 175px;
+}
+
+.row input,
+.row select {
+  width: 100%;
+}
+
+.row button {
+  align-self: center;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.formDefault {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  position: absolute;
+  padding: 0 0 3px 5px;
+}
+
+input[type="checkbox"]:checked::before {
+  content: url("../../images/catalog/check.png");
+  color: #fff;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+@media (max-width: 767px) {
+  .form {
+    min-width: 280px;
+    width: 80%;
+  }
+
+  .input,
+  .select {
+    height: 42px;
+    font-size: 18px;
+    padding: 0 15px;
+  }
+
+  .action {
+    font-size: 18px;
+  }
+
+  .form {
+    max-height: calc(100vh-20px);
+  }
+
+  .selectCheck {
+    top: 15px;
+  }
+
+  .label {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+}
+
+.fwrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <body
+    style="
+      background-color: #12451e;
+      margin: 0;
+      padding: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+      color: #fff;
+    "
+  >
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <header>
+            <a
+              href="prosvita.netlify.app"
+              style="text-align: center; display: block"
+            >
+              <img
+                src="./images/header/logo P.png"
+                style="vertical-align: middle"
+              />
+              <span style="margin-left: -20px">росвіта</span>
+            </a>
+          </header>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center">
+            Добрий день! Ваше замовлення #${ order.id } прийняте. Дякуємо за
+            покупку!
+          </p>
+          <p style="text-align: center">Замовлені товари:</p>
+          <hr />
+          <table cellpadding="0" cellspacing="0" style="width: 100%">
+            ${JSON.parse(localStorage.getItem("basket")).map( (basketItem) => `
+            <tr>
+              <td
+                style="
+                  width: 115px;
+                  height: 150px;
+                  background: url(${basketItem.img}) 100% 0px / contain
+                    no-repeat;
+                "
+              ></td>
+              <td style="padding-left: 20px">
+                <p>${basketItem.name}</p>
+                <div
+                  style="
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 40px;
+                    margin-top: 10px;
+                  "
+                >
+                  <div>
+                    <p>${basketItem.type.name}</p>
+                    <p>${basketItem.brand.name}</p>
+                  </div>
+                  <p class="amount">Кількість: ${basketItem.amount}</p>
+                  <p class="price">
+                    Вартість: ${ basketItem.amount * basketItem.price } грн
+                    (${basketItem.price} грн x ${ basketItem.amount } шт.)
+                  </p>
+                </div>
+              </td>
+            </tr>
+            ` )}
+          </table>
+          <footer style="margin-top: 20px; text-align: center">
+            До сплати: ${orderPrice}₴
+          </footer>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

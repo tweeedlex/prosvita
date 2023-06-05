@@ -1,0 +1,41 @@
+.swiper-button-next,
+.swiper-button-prev {
+  width: 60px !important;
+  height: 60px !important;
+  background: rgb(41, 82, 50);
+  border: 3px solid #ffffff;
+  border-radius: 25px;
+}
+
+.swiper-button-disabled {
+  background: rgb(29, 59, 36);
+  border: 3px solid rgb(192, 192, 192);
+  opacity: 1!important;
+}
+
+.swiper-button-disabled::after {
+  opacity: 0.75;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: url("./images/slider-arrow.png") !important;
+  width: 25px;
+  height: 15px;
+  position: absolute;
+}
+
+.swiper-button-next::after {
+  top: 2px;
+  left: 21px;
+}
+
+.swiper-button-prev::after {
+  transform: rotate(180deg);
+  bottom: 1px;
+  left: 6px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}

@@ -1,0 +1,286 @@
+.header {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  z-index: 7;
+}
+
+.logo img {
+  width: 55px;
+  height: 50px;
+}
+
+.logo span {
+  position: relative;
+  left: -20px;
+  font-size: 28px;
+}
+
+.navigation,
+.navigation ul {
+  height: 100%;
+  max-width: 500px;
+  min-height: 40px;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.navigation ul li {
+  height: 100%;
+}
+
+.navigation ul li a {
+  font-size: 24px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navigation ul li:hover .hoverline {
+  width: 75px;
+}
+
+.hoverline {
+  display: flex;
+  width: 0;
+  height: 1px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  margin: 5px auto 0 auto;
+}
+
+.active {
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  z-index: 7;
+}
+
+.actions button,
+.actions button img {
+  width: 40px;
+  height: 40px;
+}
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.popUpContent,
+.popUpContentUnlogined {
+  min-width: 320px;
+  background: linear-gradient(231.77deg, #1e5c2c 39.01%, #12451e 97.94%);
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  z-index: 5;
+  position: absolute;
+  top: 120px;
+  right: 140px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popUpContent {
+  text-align: right;
+  gap: 5px;
+}
+
+.popUpContentUnlogined {
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  height: 180px;
+}
+
+.popUpContentUnlogined * {
+  font-size: 24px;
+}
+
+.verified {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.burger {
+  width: 32px !important;
+  height: 20px !important;
+  flex-direction: column;
+  justify-content: space-between;
+
+  display: none;
+}
+
+.burger::after,
+.burger::before,
+.burger > span {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  z-index: 3;
+
+  transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+}
+
+.burger.active::after {
+  transform: rotate(45deg);
+  top: -9px;
+}
+
+.burger.active::before {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+.burger.active > span {
+  opacity: 0;
+}
+
+.inMobileMenu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+  padding: 0 100px 0 0;
+  gap: 50px;
+  transition: transform 0.3s ease;
+}
+
+.inMobileMenu.active {
+  transform: translateY(0);
+}
+
+@media (max-width: 1640px) {
+  .popUpContent,
+  .popUpContentUnlogined {
+    right: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navigation ul {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .burger {
+    display: flex;
+  }
+
+  .inMobileMenu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-height: 400px;
+    background: linear-gradient(231.77deg, #1e5c2c 39.01%, #12451e 97.94%);
+    z-index: 6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0 0 0;
+    gap: 50px;
+    transform: translateY(-100%);
+  }
+
+  .navigation,
+  .navigation ul {
+    max-width: unset;
+  }
+
+  .navigation ul {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navigation,
+  .navigation ul {
+    width: unset;
+  }
+
+  .navigation {
+    margin-top: 20px;
+  }
+
+  .navigation ul li {
+    height: unset;
+  }
+
+  .navigation ul {
+    overflow: auto;
+  }
+
+  .search {
+    width: 80%;
+  }
+
+  .search input {
+    height: 66px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .actions button img {
+    height: 32px;
+    width: 32px;
+  }
+
+  .container {
+    gap: 0;
+  }
+}
+
+@media (max-width: 479px) {
+  .popUpContent,
+  .popUpContentUnlogined {
+    max-width: 280px;
+    min-width: 280px;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .popUpContent *,
+  .popUpContentUnlogined * {
+    font-size: 16px;
+  }
+}

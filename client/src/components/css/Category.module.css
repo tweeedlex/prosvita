@@ -1,0 +1,11 @@
+.item button {
+    padding: 0 0 0 20px;
+    text-align: left;
+}
+
+.selected::before {
+    content: url("../../images/catalog/check.png");
+    position: absolute;
+}
+
+
